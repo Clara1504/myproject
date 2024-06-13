@@ -1,0 +1,384 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css" integrity="sha512-SnH5WK+bZxgPHs44uWIX+LLJAJ9/2PkPKZ5QiAj6Ta86w+fsb2TkcmfRyVX3pBnMFcV7oQPJkl9QevSCWr3W6A==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+  <link href="{%static 'app/static/formulario.css'%}" rel="stylesheet" type="text/css" />
+    <title>Formulário de Adoção</title>
+</head>
+<body>
+    <header>
+        <div id="logo">
+            <a href="{% url 'index' %}">Associação Abrigo Toda Vida Importa</a>
+        </div>
+        <nav>
+            <ul>
+                <li><a href="{% url 'sobre' %}">Sobre</a></li>
+                <li><a href="{% url 'doacoes' %}">Doações</a></li>
+                <li><a href="{% url 'adocao' %}">Adoção Responsável</a></li>
+                <li><a href="#">Loja</a></li>
+            </ul>
+        </nav>
+    </header>
+    <h1>QUESTIONÁRIO DE ADOÇÃO ABRIGO TODA VIDA IMPORTA</h1>
+    <h2>Associação Abrigo Toda Vida Importa</h2>
+    <p>CNPJ: 46.243.732-0001-03</p>
+    <p>E-mail: todavidaimportaabrigo@gmail.com</p>
+    <p>Tel: 21 98308-7711</p>
+    <p>Instagram: @abrigotodavidaimporta</p>
+
+    <form>
+        <fieldset>
+            <legend>Dados do(a) candidato(a) à adoção:</legend>
+
+            <label for="nome">1) Nome:</label>
+            <input type="text" id="nome" name="nome"><br><br>
+
+            <label for="nascimento">Nascimento:</label>
+            <input type="date" id="nascimento" name="nascimento"><br><br>
+
+            <p>*Necessário ter acima de 21 anos.</p>
+
+            <label for="endereco">Endereço completo:</label>
+            <input type="text" id="endereco" name="endereco"><br><br>
+
+            <label for="telefones">Telefones de contato:</label>
+            <input type="text" id="telefones" name="telefones"><br><br>
+
+            <label for="rg">2) RG:</label>
+            <input type="text" id="rg" name="rg"><br><br>
+
+            <label for="cpf">CPF:</label>
+            <input type="text" id="cpf" name="cpf"><br><br>
+
+            <p>*Identidade CPF e comprovante de residência atualizado (três meses da data da entrevista) em nome do candidato pai ou mãe.</p>
+
+            <label for="ocupacao">3) Ocupação:</label><br>
+            <input type="radio" id="trabalha" name="ocupacao" value="trabalha">
+            <label for="trabalha">Trabalha</label><br>
+            <input type="radio" id="estuda" name="ocupacao" value="estuda">
+            <label for="estuda">Estuda</label><br>
+            <input type="radio" id="trabalha_estuda" name="ocupacao" value="trabalha_estuda">
+            <label for="trabalha_estuda">Trabalha e estuda</label><br>
+            <input type="radio" id="nao_trabalha" name="ocupacao" value="nao_trabalha">
+            <label for="nao_trabalha">Não trabalha</label><br>
+            <input type="radio" id="desempregado" name="ocupacao" value="desempregado">
+            <label for="desempregado">Desempregado</label><br>
+            <input type="radio" id="outros_ocupacao" name="ocupacao" value="outros">
+            <label for="outros_ocupacao">Outros</label>
+            <input type="text" id="outros_ocupacao_text" name="outros_ocupacao_text"><br><br>
+
+            <label for="renda">4) Renda:</label><br>
+            <input type="radio" id="renda_fixa" name="renda" value="fixa">
+            <label for="renda_fixa">Fixa</label><br>
+            <input type="radio" id="renda_variavel" name="renda" value="variavel">
+            <label for="renda_variavel">Variável</label><br>
+            <input type="radio" id="sem_renda" name="renda" value="sem_renda">
+            <label for="sem_renda">Não possui renda própria</label>
+            <label for="valor_renda">Valor:</label>
+            <input type="text" id="valor_renda" name="valor_renda"><br><br>
+
+            <label for="residencia">5) Sobre sua residência:</label><br>
+            <input type="radio" id="casa" name="residencia" value="casa">
+            <label for="casa">Casa</label><br>
+            <input type="radio" id="apartamento" name="residencia" value="apartamento">
+            <label for="apartamento">Apartamento</label><br>
+            <input type="radio" id="sitio" name="residencia" value="sitio">
+            <label for="sitio">Sítio</label><br>
+            <input type="radio" id="outro_residencia" name="residencia" value="outro">
+            <label for="outro_residencia">Outro</label>
+            <input type="text" id="outro_residencia_text" name="outro_residencia_text"><br><br>
+
+            <label for="propriedade">Própria ou alugada:</label><br>
+            <input type="radio" id="propria" name="propriedade" value="propria">
+            <label for="propria">Própria</label><br>
+            <input type="radio" id="locada" name="propriedade" value="locada">
+            <label for="locada">Locada</label><br>
+            <input type="radio" id="herdeiros" name="propriedade" value="herdeiros">
+            <label for="herdeiros">Herdeiros</label><br>
+            <input type="radio" id="favor" name="propriedade" value="favor">
+            <label for="favor">Favor</label><br><br>
+
+            <label for="especificacoes">6) Especificações:</label><br>
+            <input type="checkbox" id="quintal_grande" name="especificacoes" value="quintal_grande">
+            <label for="quintal_grande">Quintal grande</label><br>
+            <input type="checkbox" id="janelas_com_telas" name="especificacoes" value="janelas_com_telas">
+            <label for="janelas_com_telas">Janelas com telas</label><br>
+            <input type="checkbox" id="riscos_fuga" name="especificacoes" value="riscos_fuga">
+            <label for="riscos_fuga">Há riscos de fuga</label><br>
+            <input type="checkbox" id="quintal_pequeno" name="especificacoes" value="quintal_pequeno">
+            <label for="quintal_pequeno">Quintal pequeno</label><br>
+            <input type="checkbox" id="janelas_sem_telas" name="especificacoes" value="janelas_sem_telas">
+            <label for="janelas_sem_telas">Janelas sem telas</label><br>
+            <input type="checkbox" id="local_delimitado" name="especificacoes" value="local_delimitado">
+            <label for="local_delimitado">Local delimitado</label><br>
+            <input type="checkbox" id="sem_quintal" name="especificacoes" value="sem_quintal">
+            <label for="sem_quintal">Sem quintal</label><br>
+            <input type="checkbox" id="sacada_com_tela" name="especificacoes" value="sacada_com_tela">
+            <label for="sacada_com_tela">Sacada com tela</label><br>
+            <input type="checkbox" id="muro_cercamento_frente" name="especificacoes" value="muro_cercamento_frente">
+            <label for="muro_cercamento_frente">Muro - cercamento frente residência</label><br>
+            <input type="checkbox" id="quintal_cercado" name="especificacoes" value="quintal_cercado">
+            <label for="quintal_cercado">Quintal todo cercado com portão</label><br>
+            <input type="checkbox" id="sacada_sem_tela" name="especificacoes" value="sacada_sem_tela">
+            <label for="sacada_sem_tela">Sacada sem tela</label><br>
+            <input type="checkbox" id="cerca_cercamento_frente" name="especificacoes" value="cerca_cercamento_frente">
+            <label for="cerca_cercamento_frente">Cerca - cercamento frente residência</label><br>
+            <input type="checkbox" id="quintal_aberto" name="especificacoes" value="quintal_aberto">
+            <label for="quintal_aberto">Quintal aberto</label><br>
+            <input type="checkbox" id="outros_especificacoes" name="especificacoes" value="outros">
+            <label for="outros_especificacoes">Outros</label>
+            <input type="text" id="outros_especificacoes_text" name="outros_especificacoes_text"><br><br>
+
+            <label for="seguranca">7) Sua casa oferece segurança para o animal?</label><br>
+            <input type="radio" id="seguranca_sim" name="seguranca" value="sim">
+            <label for="seguranca_sim">Sim</label><br>
+            <input type="radio" id="seguranca_nao" name="seguranca" value="nao">
+            <label for="seguranca_nao">Não</label><br><br>
+            <p>* Casas com cercas apresentam facilidades de fuga. Não doamos. O indicado é que a casa tenha muros.</p>
+
+            <label for="local_animal">8) Onde o animal ficará?</label><br>
+            <input type="radio" id="dentro_casa" name="local_animal" value="dentro_casa">
+            <label for="dentro_casa">Dentro de Casa</label><br>
+            <input type="radio" id="lado_fora" name="local_animal" value="lado_fora">
+            <label for="lado_fora">Do lado de fora</label><br>
+            <input type="radio" id="preso_corrente" name="local_animal" value="preso_corrente">
+            <label for="preso_corrente">Preso na corrente</label><br>
+            <input type="radio" id="canil" name="local_animal" value="canil">
+            <label for="canil">Canil</label><br><br>
+
+            <label for="mudar_apartamento">9) Se morar em CASA há a possibilidade de você mudar para apartamento?</label><br>
+            <input type="radio" id="mudar_sim" name="mudar_apartamento" value="sim">
+            <label for="mudar_sim">Sim</label><br>
+            <input type="radio" id="mudar_nao" name="mudar_apartamento" value="nao">
+            <label for="mudar_nao">Não</label><br><br>
+            <p>* Nesse caso o que você fará em relação ao animal adotado?</p>
+            <input type="text" id="acao_animal_mudar" name="acao_animal_mudar"><br><br>
+
+            <label for="permitido_animais">10) É permitido ter animais no local em que mora?</label><br>
+            <input type="radio" id="permitido_sim" name="permitido_animais" value="sim">
+            <label for="permitido_sim">Sim</label><br>
+            <input type="radio" id="permitido_nao" name="permitido_animais" value="nao">
+            <label for="permitido_nao">Não</label><br><br>
+
+            <label for="outros_animais">11) Já tem outros animais?</label><br>
+            <input type="radio" id="outros_animais_sim" name="outros_animais" value="sim">
+            <label for="outros_animais_sim">Sim</label><br>
+            <input type="radio" id="outros_animais_nao" name="outros_animais" value="nao">
+            <label for="outros_animais_nao">Não</label><br>
+            <label for="quantos_quais">Se sim, quantos e quais?</label><br>
+            <input type="text" id="quantos_quais" name="quantos_quais"><br><br>
+            <label for="castrados_vacinados">Estão castrados e vacinados?</label><br>
+            <input type="text" id="castrados_vacinados" name="castrados_vacinados"><br><br>
+            <p>Obs.: Não autorizamos a adoção de animais da mesma espécie e sexo diferente caso não estejam todos castrados. Ex.: Já tem um cão macho não castrado não pode adotar uma fêmea ainda que filhote não castrada.</p>
+        </fieldset>
+
+        <fieldset>
+            <legend>Informações Adicionais</legend>
+            <label for="mora_sozinho">12) Mora sozinho(a)?</label><br>
+            <input type="radio" id="mora_sozinho_sim" name="mora_sozinho" value="sim">
+            <label for="mora_sozinho_sim">Sim</label><br>
+            <input type="radio" id="mora_sozinho_nao" name="mora_sozinho" value="nao">
+            <label for="mora_sozinho_nao">Não</label><br>
+            <label for="com_quem">Com quem?</label><br>
+            <input type="text" id="com_quem" name="com_quem"><br><br>
+
+            <label for="criancas_casa">13) Há crianças em sua casa?</label><br>
+            <input type="radio" id="criancas_sim" name="criancas_casa" value="sim">
+            <label for="criancas_sim">Sim</label><br>
+            <input type="radio" id="criancas_nao" name="criancas_casa" value="nao">
+            <label for="criancas_nao">Não</label><br>
+            <label for="quantas_criancas">Quantas? Qual a idade?</label><br>
+            <input type="text" id="quantas_criancas" name="quantas_criancas"><br><br>
+
+            <label for="alergia_pelo">14) Alguém em sua casa é alérgico a pelo de animal?</label><br>
+            <input type="radio" id="alergia_sim" name="alergia_pelo" value="sim">
+            <label for="alergia_sim">Sim</label><br>
+            <input type="radio" id="alergia_nao" name="alergia_pelo" value="nao">
+            <label for="alergia_nao">Não</label><br>
+            <label for="lidar_alergia">Se sim, como lidará com a situação?</label><br>
+            <input type="text" id="lidar_alergia" name="lidar_alergia"><br><br>
+
+            <label for="concordancia_adocao">15) Todos na residência concordam com a adoção de um animal?</label><br>
+            <input type="radio" id="concordancia_sim" name="concordancia_adocao" value="sim">
+            <label for="concordancia_sim">Sim</label><br>
+            <input type="radio" id="concordancia_nao" name="concordancia_adocao" value="nao">
+            <label for="concordancia_nao">Não</label><br><br>
+
+            <label for="animal_desejado">16) Animal que deseja adotar:</label><br>
+            <input type="radio" id="gato" name="animal_desejado" value="gato">
+            <label for="gato">Gato</label><br>
+            <input type="radio" id="cachorro" name="animal_desejado" value="cachorro">
+            <label for="cachorro">Cachorro</label><br>
+            <label for="sexo_animal">Sexo:</label><br>
+            <input type="radio" id="macho" name="sexo_animal" value="macho">
+            <label for="macho">Macho</label><br>
+            <input type="radio" id="femea" name="sexo_animal" value="femea">
+            <label for="femea">Fêmea</label><br><br>
+
+            <label for="motivo_adocao">17) Por que quer adotar um animal?</label><br>
+            <input type="radio" id="companhia" name="motivo_adocao" value="companhia">
+            <label for="companhia">Companhia</label><br>
+            <input type="radio" id="guarda_vigia" name="motivo_adocao" value="guarda_vigia">
+            <label for="guarda_vigia">Guarda/vigia</label><br>
+            <input type="radio" id="presente" name="motivo_adocao" value="presente">
+            <label for="presente">Presente para alguém</label><br>
+            <input type="radio" id="outro_motivo" name="motivo_adocao" value="outro">
+            <label for="outro_motivo">Outro</label>
+            <input type="text" id="outro_motivo_text" name="outro_motivo_text"><br><br>
+
+            <label for="teve_outros_animais">18) Já teve outro(s) animal(is)?</label><br>
+            <input type="radio" id="teve_outros_sim" name="teve_outros_animais" value="sim">
+            <label for="teve_outros_sim">Sim</label><br>
+            <input type="radio" id="teve_outros_nao" name="teve_outros_animais" value="nao">
+            <label for="teve_outros_nao">Não</label><br>
+            <label for="motivo_nao_ter">Se não tem mais, qual o motivo?</label><br>
+            <input type="text" id="motivo_nao_ter" name="motivo_nao_ter"><br><br>
+
+            <label for="recursos_manter">19) Está preparado(a) para arcar com as despesas para manter o animal em relação a ração, remédios, vacinas, etc.?</label><br>
+            <input type="radio" id="recursos_sim" name="recursos_manter" value="sim">
+            <label for="recursos_sim">Sim</label><br>
+            <input type="radio" id="recursos_nao" name="recursos_manter" value="nao">
+            <label for="recursos_nao">Não</label><br><br>
+
+            <label for="enfermidade">20) Se o animal adoecer, você terá condições de levá-lo ao veterinário?</label><br>
+            <input type="radio" id="enfermidade_sim" name="enfermidade" value="sim">
+            <label for="enfermidade_sim">Sim</label><br>
+            <input type="radio" id="enfermidade_nao" name="enfermidade" value="nao">
+            <label for="enfermidade_nao">Não</label><br><br>
+
+            <label for="emergencia">21) Se acontecer alguma coisa com você, quem cuidará do animal?</label><br>
+            <input type="text" id="emergencia" name="emergencia"><br><br>
+
+            <label for="visitas">22) Aceita visitas para acompanhamento pós-adoção?</label><br>
+            <input type="radio" id="visitas_sim" name="visitas" value="sim">
+            <label for="visitas_sim">Sim</label><br>
+            <input type="radio" id="visitas_nao" name="visitas" value="nao">
+            <label for="visitas_nao">Não</label><br>
+            <p>Obs.: Não realizamos adoções para a residência de outras pessoas, sítios ou chácaras onde o adotante não resida.</p><br>
+
+          <label for="responsavel">20) Quem será o principal responsável pelos cuidados como animal adotado?</label>
+                  <input type="text" id="responsavel" name="responsavel"><br><br>
+
+                  <label>21) Em caso de viagens, tem com quem deixar o animal? Quem cuidará do animal?</label><br>
+                  <input type="radio" id="viagemSim" name="viagem" value="Sim">
+                  <label for="viagemSim">Sim</label>
+                  <input type="radio" id="viagemNao" name="viagem" value="Não">
+                  <label for="viagemNao">Não</label><br><br>
+
+                  <label for="tempoSozinho">22) Quanto tempo por dia o animal ficará sozinho em casa?</label>
+                  <input type="text" id="tempoSozinho" name="tempoSozinho"><br><br>
+
+                  <label>23) Você pode levar o animal para passear? Quantas vezes? (apenas para cães)</label><br>
+                  <input type="radio" id="passearSim" name="passear" value="Sim">
+                  <label for="passearSim">Sim</label>
+                  <input type="radio" id="passearNao" name="passear" value="Não">
+                  <label for="passearNao">Não</label><br><br>
+
+                  <label>24) O que o animal irá comer?</label><br>
+                  <input type="radio" id="racao" name="alimentacao" value="Ração">
+                  <label for="racao">Ração</label>
+                  <input type="radio" id="comidaHumana" name="alimentacao" value="Comida humana">
+                  <label for="comidaHumana">Comida humana</label>
+                  <input type="radio" id="outros" name="alimentacao" value="Outros">
+                  <label for="outros">Outros</label><br><br>
+
+                  <label for="educacao">25) Como faz para educar o animal?</label>
+                  <input type="text" id="educacao" name="educacao"><br><br>
+
+                  <label>26) Possui caixa de transporte apropriada para levar o animal? (apenas em caso de gatos)</label><br>
+                  <input type="radio" id="caixaTransporteSim" name="caixaTransporte" value="Sim">
+                  <label for="caixaTransporteSim">Sim</label>
+                  <input type="radio" id="caixaTransporteNao" name="caixaTransporte" value="Não">
+                  <label for="caixaTransporteNao">Não</label><br><br>
+
+                  <label>27) Você tem consciência da importância da castração? Está ciente e de acordo com a esterilização feita pelo @abrigotodavidaimporta na data e hora marcada pela responsável pelo abrigo?</label><br>
+                  <input type="radio" id="castracaoSim" name="castracao" value="Sim">
+                  <label for="castracaoSim">Sim</label>
+                  <input type="radio" id="castracaoNao" name="castracao" value="Não">
+                  <label for="castracaoNao">Não</label><br><br>
+
+                  <label>28) O tempo médio de vida de um animal doméstico é de 12 a 16 anos. Você está preparado para este compromisso duradouro?</label><br>
+                  <input type="radio" id="compromissoSim" name="compromisso" value="Sim">
+                  <label for="compromissoSim">Sim</label>
+                  <input type="radio" id="compromissoNao" name="compromisso" value="Não">
+                  <label for="compromissoNao">Não</label><br><br>
+
+                  <label for="perguntas">29) O que você faria se o animal adotado:</label><br>
+                  <textarea id="perguntas" name="perguntas" rows="10" cols="50">
+          - Se perdesse?
+          - Adoecesse ou sofresse um acidente?
+          - Arranhasse/mordesse o seu filho?
+          - Comesse o seu sapato, rasgasse o seu sofá ou quebrasse algum objeto de valor?
+          - Fizesse as necessidades onde não deveria?
+          - Fizesse coisas que você não queira?
+                  </textarea><br><br>
+
+                  <label>30) Está ciente de tudo que envolve a adoção? (Gastos, vacinas, ração de boa qualidade, período de adaptação, principalmente para filhotes, pode envolver choros durante a noite, coco e xixi fora do lugar, etc. Em caso de gatos, soltura de pêlos, afiação de unhas em móveis, etc)</label><br>
+                  <input type="radio" id="cienteSim" name="ciente" value="Sim">
+                  <label for="cienteSim">Sim</label>
+                  <input type="radio" id="cienteNao" name="ciente" value="Não">
+                  <label for="cienteNao">Não</label><br><br>
+
+                  <label for="bebe">31) E se a família resolver ter um bebê, como ficará o animal?</label>
+                  <input type="text" id="bebe" name="bebe"><br><br>
+
+                  <label>32) Você está certo e consciente da adoção?</label><br>
+                  <input type="radio" id="conscienteSim" name="consciente" value="Sim">
+                  <label for="conscienteSim">Sim</label>
+                  <input type="radio" id="conscienteNao" name="consciente" value="Não">
+                  <label for="conscienteNao">Não</label><br><br>
+
+                  <label>33) Você e sua família permitirão a visita do responsável pelo Abrigo à sua casa para verificar como o animal está sendo cuidado, pós adoção, mesmo que seja visita surpresa?</label><br>
+                  <input type="radio" id="visitaSim" name="visita" value="Sim">
+                  <label for="visitaSim">Sim</label>
+                  <input type="radio" id="visitaNao" name="visita" value="Não">
+                  <label for="visitaNao">Não</label><br><br>
+
+                  <label>34) Você sabe que não poderá doar a outra pessoa o animal adotado sem antes ter autorização e aprovação do Instituto Abrigo Toda Vida Importa por escrito?</label><br>
+                  <input type="radio" id="doarSim" name="doar" value="Sim">
+                  <label for="doarSim">Sim</label>
+                  <input type="radio" id="doarNao" name="doar" value="Não">
+                  <label for="doarNao">Não</label><br><br>
+
+                  <label>35) Você sabe que a partir do momento que adotar o animal do Abrigo Toda Vida Importa você responderá legalmente e criminalmente por ele até o ultimo dia de vida dele, sendo responsável pelo bem-estar e segurança dele?</label><br>
+                  <input type="radio" id="responsavelSim" name="responsavel" value="Sim">
+                  <label for="responsavelSim">Sim</label>
+                  <input type="radio" id="responsavelNao" name="responsavel" value="Não">
+                  <label for="responsavelNao">Não</label><br><br>
+
+                  <label>36) Está ciente que todos os animais do Abrigo Toda Vida Importa possuem um chip de identificação aplicado sob o subcutâneo e através dele podemos identificar todas as informações dele, inclusive quem foi o adotante e no caso de abandono ou maus tratos responsabilizar o adotante juridicamente pelo o que acontecer a esse animal?</label><br>
+                  <input type="radio" id="chipSim" name="chip" value="Sim">
+                  <label for="chipSim">Sim</label>
+                  <input type="radio" id="chipNao" name="chip" value="Não">
+                  <label for="chipNao">Não</label><br><br>
+
+                  <label>37) Está ciente que se em algum momento da vida do animal, o adotante não quiser mais ficar com ele, ele terá que ser devolvido obrigatoriamente ao Instituto Abrigo Toda Vida Importa, não podendo ser doado a nenhuma outra pessoa, independente se ser parente ou não e arcará com a responsabilidade inclusive financeira do mesmo até o fim de sua vida?</label><br>
+                  <input type="radio" id="devolucaoSim" name="devolucao" value="Sim">
+                  <label for="devolucaoSim">Sim</label>
+                  <input type="radio" id="devolucaoNao" name="devolucao" value="Não">
+                  <label for="devolucaoNao">Não</label><br><br>
+
+                  <label>38) Em caso de aprovação para adoção, esse questionário fará parte do contrato de adoção para constar que o adotante estava ciente de todas as suas obrigações e deveres com o animal adotado e da adoção, podendo ser responsabilizado juridicamente caso ocorra algo com o animal adotado, tendo assim valor legal.</label><br>
+                  <input type="radio" id="contratoSim" name="contrato" value="Sim">
+                  <label for="contratoSim">Sim</label>
+                  <input type="radio" id="contratoNao" name="contrato" value="Não">
+                  <label for="contratoNao">Não</label><br><br>
+          <label for="motivos_adocao">39) Diga-nos em poucas palavras porque você deseja adotar um animal?</label><br>
+          <textarea id="motivos_adocao" name="motivos_adocao"></textarea><br><br>
+
+          <label for="data">Data:</label>
+          <input type="date" id="data" name="data"><br><br>
+
+          <label for="assinatura">Assinatura (envie uma foto):</label>
+          <input type="file" id="assinatura" name="assinatura" accept="image/*"><br><br>
+
+          <p><strong>AVISO LEGAL</strong></p>
+          <p>Os dados recolhidos são confidenciais e utilizados apenas para o processo de adoção. A aprovação da adoção está sujeita a critérios e avaliações do Instituto Abrigo Toda Vida Importa, visando garantir o bem-estar dos animais.</p>
+
+          <input type="submit" value="Enviar">
+        </fieldset>
+    </form>
+</body>
+</html>

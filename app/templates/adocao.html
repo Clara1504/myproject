@@ -1,0 +1,117 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Associação Abrigo Toda Vida Importa</title>
+  <link href="adocao.css" rel="stylesheet" type="text/css" />
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css" integrity="sha512-SnH5WK+bZxgPHs44uWIX+LLJAJ9/2PkPKZ5QiAj6Ta86w+fsb2TkcmfRyVX3pBnMFcV7oQPJkl9QevSCWr3W6A==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.5.0/css/font-awesome.min.css">
+  <link rel="icon" href="imagens/favicon.ico" type="image/x-icon">
+</head>
+
+<body>
+    <header>
+        <div id="logo">
+            <a href="{% url 'index' %}">Associação Abrigo Toda Vida Importa</a>
+        </div>
+        <nav>
+            <ul>
+                <li><a href="{% url 'sobre.html' %}">Sobre</a></li>
+                <li><a href="{% url 'doacoes' %}">Doações</a></li>
+                <li><a href="{% url 'adocao' %}">Adoção Responsável</a></li>
+                <li><a href="#">Loja</a></li>
+            </ul>
+        </nav>
+    </header>
+  <div class="content">
+    <div class="image-container"></div>
+    <div class="text-container">
+      <h1 id =''>Adoção Resposavel: Oque é ?</h1>
+      <p>
+        A adoção responsável é um compromisso sério que exige dedicação e amor pelos animais. Ao adotar, é essencial
+        considerar o bem-estar do animal e garantir que ele tenha um lar seguro e afetuoso. Antes de tomar essa decisão,
+        avalie se você tem tempo, recursos financeiros e espaço adequado para cuidar do animal.
+      </p>
+      <p>
+        Animais adotados muitas vezes vêm de situações difíceis e precisam de paciência e compreensão para se ajustarem ao
+        novo ambiente. Considere a idade, tamanho e necessidades específicas do animal para garantir que ele se encaixe bem
+        no seu estilo de vida e rotina.
+      </p>
+      <p>
+        Adoção responsável também significa estar preparado para compromissos a longo prazo, incluindo cuidados
+        veterinários, alimentação de qualidade e atenção diária. Além disso, a socialização e treinamento são fundamentais
+        para o bem-estar do animal e para uma convivência harmoniosa.
+      </p>
+      <p>
+        Ao adotar, você está salvando uma vida e contribuindo para a diminuição do número de animais abandonados.
+        Organizações de adoção oferecem suporte e orientação para ajudar os adotantes a entender as necessidades dos animais
+        e a criar um ambiente propício para eles.
+      </p>
+      <p>
+        Lembre-se de que a adoção é uma via de mão dupla: tanto o animal quanto o adotante se beneficiam dessa relação. O
+        vínculo que se forma é recompensador e traz alegria e companhia para ambas as partes. Escolher adotar de forma
+        responsável é um ato de compaixão e respeito pelos animais, garantindo que eles tenham a chance de viver uma vida
+        plena e feliz.
+      </p>
+    </div>
+    <div class="text-container2">
+      <h1 id =''>Educação e Suporte:</h1>
+      <p> 
+      Oferecemos programas de educação e suporte para adotantes, incluindo orientações sobre treinamento, nutrição, cuidados veterinários e comportamento animal. Nosso objetivo é garantir que todas as famílias adotantes estejam bem-informadas e equipadas para cuidar de seus novos companheiros de forma responsável e amorosa.
+      </p>
+      <h1 id =''>Processo de Adoção:</h1>
+      <p>
+        Nosso processo de adoção inclui entrevistas, visitas domiciliares e um período de adaptação. Esse processo é projetado para garantir que o animal será bem cuidado e que a nova família está preparada para recebê-lo. Durante o período de adaptação, oferecemos suporte contínuo para ajudar na integração do animal à nova casa.
+      </p>
+    </div>
+  </div>
+  <a href='{% static "app/templates/formulario.html" %}' class="formulario">
+    Preencha o Formulário de Adoção!
+    </a>
+    <footer>
+      <div id="footer_content">
+        <div id="footer_contacts">
+          <h1>Mídias Sociais </h1>
+          <p>Nossa redes de contato!</p>
+          <div id="footer_social_media">
+            <a href="https://www.instagram.com/abrigotodavidaimporta/" class="footer-link" id="instagram">
+              <i class="fa-brands fa-instagram"></i>
+            </a>
+            <a href="https://www.facebook.com/tovidaimportaabrigo?locale=pt_BR" class="footer-link" id="facebook">
+              <i class="fa-brands fa-facebook-f"></i>
+            </a>
+          </div>
+        </div>
+        <ul class="footer-list">
+          <li>
+            <h1>Contato</h1>
+          </li>
+          <li>
+            <a class="footer-link">Número: (21) 98308-7711</a>
+          </li>
+          <li>
+            <a class="footer-link">E-mail: todavidaimportaabrigo@gmail.com</a>
+          </li>
+        </ul>
+        <ul class="footer-list">
+          <li>
+            <h1>Conta</h1>
+          </li>
+          <li>
+            <a class="footer-link">Banco Bradesco Ag. 872-9</a>
+          </li>
+          <li>
+            <a class="footer-link">Conta corrente. 20930-9</a>
+          </li>
+          <li>
+            <a class="footer-link">CNPJ E PIX. 46.243.732/0001-03</a>
+          </li>
+        </ul>
+      </div>
+    </footer>
+
+    </body>
+
+    </html>
